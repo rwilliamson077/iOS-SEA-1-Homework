@@ -1,8 +1,8 @@
 ## Homework
 
-Welcome to the homework repository for iOS-SEA-1!<br/><br/>
-
-The first assignment Lesson01 is due on Tuesday, December 8th. We'll go over how to submit your work during class on Tuesday.<br/>Don't worry about putting it up on github for now.
+Welcome to the homework repository for iOS-SEA-1!<br/>
+Lesson01 is due on Tuesday, December 8th. We'll go over how to submit your work during class on Tuesday.
+<br/>Don't worry about putting it up on github for now.
 
 # If this is your first time here:
 1. Clone the repository locally with Github Desktop. The default destination is your Documents directory. <br/>
