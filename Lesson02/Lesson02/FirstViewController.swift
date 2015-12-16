@@ -16,15 +16,57 @@ class FirstViewController: UIViewController {
     TODO three: Hook up the button to a NEW function (in addition to the two above). Print “You can drink” below the above text if the user is above 21. If they are above 18, print “you can vote”. If they are above 16, print “You can drive”
     TODO four: Hook up the button to a NEW function (in additino to the three above). Print “you can drive” if the user is above 16 but below 18. It should print “You can drive and vote” if the user is above 18 but below 21. If the user is above 21, it should print “you can drive, vote and drink (but not at the same time!”.
     */
-    
-    @IBOutlet var name: UITextField!
 
-    @IBOutlet var age: UITextField!
+    @IBOutlet weak var age: UITextField!
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet var helloNameButton: UIButton!
+    @IBOutlet var helloNameText: UILabel!
     
-    @IBOutlet var helloWordName: UIButton!
-    @IBOutlet weak var helloName: UILabel!
+    
+    @IBOutlet weak var helloWorld: UILabel!
+    
+    @IBAction func printHelloWorld(sender: AnyObject) {
+        helloWorld.text = "Hello World"
+    }
+    
+    @IBAction func helloNameAge(sender: UIButton) {
+        helloNameText.text = "Hello \(name.text!), you are \(age.text!) years old!"
+    }
+    
+    
+    
+    @IBOutlet weak var drinkDriveVote: UIButton!
+    @IBOutlet weak var driveVoteOutput: UILabel!
+    
+    @IBAction func driveVoteFunction(sender: AnyObject) {
+        var A = age.text
+        var B = Int(A!)
+        if B >= 16 {
+            driveVoteOutput.text = "you can drive"
+        }
+        if B >= 18 {
+            driveVoteOutput.text = "you can vote"
+        }
+        if B >= 21 {
+            driveVoteOutput.text = "you can drink"
+        }
+    }
+    
+    
+    @IBAction func voteDrive(sender: AnyObject) {
+        var A = age.text
+        var B = Int(A!)
+        if B >= 16 && B <= 18 {
+            driveVoteOutput.text = "you can drive"
+        }
+        if B >= 18 && B <= 21 {
+            driveVoteOutput.text = "you can drive and vote"
+        }
+        if B >= 21 {
+            driveVoteOutput.text = "you can drive, vote and drink"
+        }
+        
+    }
 
-    
 
-    
 }

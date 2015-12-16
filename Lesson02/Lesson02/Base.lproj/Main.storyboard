@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LUb-Ej-wn6">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -54,7 +54,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder text, replace me!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2W-sh-fBn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Personal Greeting" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2W-sh-fBn">
                                 <rect key="frame" x="138" y="249" width="325" height="101"/>
                                 <animations/>
                                 <constraints>
@@ -65,29 +65,71 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvU-j8-0it">
-                                <rect key="frame" x="251" y="188" width="98" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ea-Rz-XZ4">
+                                <rect key="frame" x="208" y="334" width="183" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="w0G-W8-mkg"/>
+                                    <constraint firstAttribute="height" constant="30" id="xxa-i8-q1e"/>
+                                </constraints>
+                                <state key="normal" title="Can you drink/drive/vote?">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="driveVoteFunction:" destination="vXZ-lx-hvc" eventType="touchDown" id="mcB-Eg-vps"/>
+                                    <action selector="voteDrive:" destination="vXZ-lx-hvc" eventType="touchDown" id="Tms-Jz-hc2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTU-pe-ojl">
+                                <rect key="frame" x="233" y="373" width="134" height="45"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3Y-0S-J0n">
+                                <rect key="frame" x="233" y="442" width="134" height="45"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47a-sk-nEt">
+                                <rect key="frame" x="233" y="177" width="134" height="45"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvU-j8-0it">
+                                <rect key="frame" x="233" y="245" width="132" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="5Jq-ks-r1L"/>
                                     <constraint firstAttribute="width" constant="98" id="ifh-L7-OIh"/>
                                 </constraints>
-                                <state key="normal" title="Generate text!">
+                                <state key="normal" title="Personal Greeting">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="showHelloWorld:" destination="vXZ-lx-hvc" eventType="touchDown" id="C7U-K4-CbD"/>
+                                    <action selector="helloNameAge:" destination="vXZ-lx-hvc" eventType="touchDown" id="jnN-xa-GF8"/>
+                                    <action selector="printHelloWorld:" destination="vXZ-lx-hvc" eventType="touchDown" id="DZx-Dc-glf"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="GTU-pe-ojl" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="1q8-PV-oWM"/>
                             <constraint firstAttribute="centerX" secondItem="v2W-sh-fBn" secondAttribute="centerX" id="68c-ag-RaM"/>
+                            <constraint firstItem="0Ea-Rz-XZ4" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="6v2-Id-yx0"/>
                             <constraint firstItem="dvu-Gz-gU3" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="26" id="Dag-Q3-O8a"/>
                             <constraint firstAttribute="centerX" secondItem="vvU-j8-0it" secondAttribute="centerX" id="Dpp-YF-b3T"/>
+                            <constraint firstItem="O3Y-0S-J0n" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Ges-9c-7vs"/>
                             <constraint firstItem="v2W-sh-fBn" firstAttribute="top" secondItem="vvU-j8-0it" secondAttribute="bottom" constant="31" id="P1u-Fz-KUb"/>
+                            <constraint firstItem="47a-sk-nEt" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="PKB-w4-SEy"/>
                             <constraint firstItem="HD3-Of-BAd" firstAttribute="top" secondItem="dvu-Gz-gU3" secondAttribute="bottom" constant="19" id="gLg-zz-mbV"/>
+                            <constraint firstItem="0Ea-Rz-XZ4" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="kYN-sB-kN0"/>
                             <constraint firstAttribute="centerX" secondItem="dvu-Gz-gU3" secondAttribute="centerX" id="nEN-5d-05d"/>
                             <constraint firstItem="vvU-j8-0it" firstAttribute="top" secondItem="HD3-Of-BAd" secondAttribute="bottom" constant="19" id="uE4-OL-hCH"/>
                             <constraint firstAttribute="centerX" secondItem="HD3-Of-BAd" secondAttribute="centerX" id="xtl-7l-iVd"/>
@@ -101,13 +143,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="age" destination="HD3-Of-BAd" id="ifX-i8-FjX"/>
-                        <outlet property="ageField" destination="HD3-Of-BAd" id="0BB-Fw-dSm"/>
-                        <outlet property="generateHello" destination="vvU-j8-0it" id="Giu-rL-Qdf"/>
-                        <outlet property="helloName" destination="v2W-sh-fBn" id="Bdy-Xg-M3M"/>
-                        <outlet property="helloWordName" destination="vvU-j8-0it" id="Mau-gI-z3x"/>
-                        <outlet property="name" destination="dvu-Gz-gU3" id="tJv-Os-3Fs"/>
-                        <outlet property="nameField" destination="dvu-Gz-gU3" id="Fip-kQ-LNE"/>
+                        <outlet property="age" destination="HD3-Of-BAd" id="TFh-Ob-r8G"/>
+                        <outlet property="drinkDriveVote" destination="0Ea-Rz-XZ4" id="dwa-my-fZ5"/>
+                        <outlet property="driveVoteOutput" destination="GTU-pe-ojl" id="vVL-RK-qfh"/>
+                        <outlet property="helloNameButton" destination="vvU-j8-0it" id="mi5-CV-3QI"/>
+                        <outlet property="helloNameText" destination="v2W-sh-fBn" id="zTe-Au-OcO"/>
+                        <outlet property="helloWorld" destination="47a-sk-nEt" id="HBe-Zv-yNd"/>
+                        <outlet property="name" destination="dvu-Gz-gU3" id="06w-AP-Rf5"/>
+                        <outlet property="voteDriveFunction" destination="0Ea-Rz-XZ4" id="77z-k2-Ek0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -157,6 +200,9 @@
                                 <state key="normal" title="Add">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addTheNumbers:" destination="DXI-gN-4Tg" eventType="touchDown" id="V34-ua-rar"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -177,6 +223,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addNumberBox" destination="dsS-73-FSq" id="6hG-a3-9Zu"/>
+                        <outlet property="addNumbers" destination="BLG-wH-QXc" id="j4o-h9-Nke"/>
+                        <outlet property="numberDisplay" destination="qiz-6d-s2d" id="o57-Vd-iwc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bFb-9H-Aa6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -194,16 +245,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UJA-B5-7Cz">
-                                <rect key="frame" x="252" y="95" width="97" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="D4B-nV-WYF"/>
-                                    <constraint firstAttribute="width" constant="97" id="i5D-zQ-nrx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Should print 'is even' or 'is not even'" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0y-Zz-8RE">
                                 <rect key="frame" x="160" y="140" width="280" height="21"/>
                                 <animations/>
@@ -225,7 +266,20 @@
                                 <state key="normal" title="Calculate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="doOddEven:" destination="nKH-F5-XzW" eventType="touchDown" id="9xb-Q6-6W1"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UJA-B5-7Cz">
+                                <rect key="frame" x="252" y="95" width="97" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="D4B-nV-WYF"/>
+                                    <constraint firstAttribute="width" constant="97" id="i5D-zQ-nrx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -245,6 +299,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="calculate" destination="aVV-GO-Y1O" id="lbU-fu-DBG"/>
+                        <outlet property="oddEven" destination="UJA-B5-7Cz" id="K8W-ed-N3R"/>
+                        <outlet property="output" destination="y0y-Zz-8RE" id="cv8-zR-Doi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bic-8V-fDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
